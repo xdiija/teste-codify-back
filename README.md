@@ -2,32 +2,6 @@
 
 Após clonar o Repositório, abra a pasta do projeto no Terminal
 
-Crie o Arquivo .env
-```sh
-cp .env.example .env
-```
-
-Atualize as variáveis de ambiente do arquivo .env
-```dosini
-APP_NAME="Livraria"
-APP_URL=http://localhost:8989
-
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=root
-
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
-
-REDIS_HOST=redis
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-```
-
 Suba os containers do projeto
 ```sh
 docker-compose up -d
@@ -43,7 +17,12 @@ Instale as dependências do projeto
 composer install
 ```
 
-Gere a key do projeto Laravel
+Execute as migratins
 ```sh
-php artisan key:generate
+php artisan migrate
+```
+
+Execute o seeder do usuario admin
+```sh
+php artisan db:seed
 ```
