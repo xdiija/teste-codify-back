@@ -1,6 +1,11 @@
+### Requisitos
+
+- Docker
+- Docker-compose
+
 ### Passo a passo
 
-Após clonar o Repositório, abra a pasta do projeto no Terminal
+- Após clonar o Repositório, abra a pasta do projeto no Terminal
 
 Suba os containers do projeto
 ```sh
@@ -17,7 +22,7 @@ Instale as dependências do projeto
 composer install
 ```
 
-Execute as migratins
+Execute as migrations
 ```sh
 php artisan migrate
 ```
